@@ -1,3 +1,179 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-	margin: 0;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Styles */
+
+body {
+  background-color: white;
+  font-family: Roboto;
+  font-size: 100%;
+  line-height: 1.5;
+  }
+
+
+$brb-aside-width: 400px;
+
+.brb-main {
+	display: block;
+	position: fixed;
+	z-index: 99999;
+	transition: transform 0.2s ease-out;
+	top: 0;
+	bottom: 0;
+	right: -$brb-aside-width;
+	width: $brb-aside-width;
+	font-family: arial;
+	text-align: left;
+    color: #303030;
+    font-weight: 400;
+
+	.brb-aside {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: $brb-aside-width;
+		background: #f4f4f4;
+		overflow: auto;
+
+		article {
+			padding: 30px;
+
+			/* Module: Rating */
+
+			.brb-data-title {
+			  float: left;
+			  max-width: 120px;
+			}
+
+			.brb-data-score {
+			  float: right;
+			  li {
+			    border: 2px solid green;
+			    border-radius: 50%;
+			    box-sizing: border-box;
+			    width: 20px;
+			    height: 20px;
+			    display: inline-block;
+			    &::before {
+			      content: "";
+			      position: absolute;
+			      height: 10px;
+			      width: 10px;
+			      margin: 3px;
+			      border-radius: 50%;
+			      overflow: hidden;
+			    }
+			  }
+			}
+
+			.brb-full {
+			  position: absolute;
+			  height: 10px;
+			  width: 10px;
+			  margin: 3px;
+			  border-radius: 50%;
+			  overflow: hidden;
+			  &::before {
+			    content :"";
+			    position: absolute;
+			    height: 10px;
+			    width: 10px;
+			    background: green;
+			  }
+			}
+
+			.brb-half::before {
+			  width: 6px;
+			}
+
+			.brb-empty {
+			  display: none;
+			  content: "lol";
+			}
+
+
+			/* Module: Reviews */
+
+			.brb-data-bar {
+				float: left;
+				background: green;
+				height: 10px;
+				margin-top: 8px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					background: #ddd;
+					width: 120px;
+					height: 10px;
+					z-index: -1;
+				}
+			}
+
+		}
+	}
+
+	.brb-switch {
+		position: absolute;
+		top: 0px;
+		left: -54px;
+		width: 50px;
+		height: 50px;
+		background: green;
+	}
+
+	&.brb-active {
+		transform: translateX(-$brb-aside-width);
+	}
+
+	header {
+		padding: 15px 20px;
+		background: #fff;
+		font-weight: bold;
+	}
+
+
+	.brb-group:before,
+	.brb-group:after {
+	    content: " ";
+	    display: table;
+	}
+	.brb-group:after {
+	    clear: both;
+	}
+
+
 }

@@ -87,21 +87,18 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
-			options: {
-				livereload: 5555
-			},
 			html: {
 				files: [
-					'/index.html',
-					'/**/*.html',
-					'/*.html',
+					'index.html',
+					'**/*.html',
+					'*.html',
 				],
 				tasks: ['processhtml']
 			},
 			scripts: {
 				files: [
 					'Gruntfile.js',
-					'assets/*.js',
+					'assets/js.js',
 					'assets/**/*.js'
 				],
 				tasks: ['jshint']
@@ -149,7 +146,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-ng-annotate');
-	grunt.loadNpmTasks('grunt-jsdoc');
 	grunt.loadNpmTasks('grunt-http-server');
 	grunt.loadNpmTasks('grunt-run');
 
@@ -162,7 +158,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('live', ['http-server:production', 'watch']);
 
 
-	// Documentation task
-	grunt.registerTask('doc', ['jsdoc:doc']);
 
 };
