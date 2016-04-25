@@ -1,0 +1,37 @@
+{
+  "name": "revibar",
+  "description": "NRevibar 2.0",
+  "version": "0.0.1",
+  "homepage": "http://www.beast.io",
+  "author": {
+    "name": "BEAST",
+    "url": "http://beast.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beast/revibar.git"
+  },
+  "license": "copyright",
+  "private": true,
+  "engines": {
+    "node": ">= 0.12.7"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-http-server": "^1.13.0",
+    "grunt-ng-annotate": "^1.0.1",
+    "grunt-processhtml": "^0.3.8",
+    "grunt-run": "^0.5.2",
+    "grunt-sass": "^1.0.0"
+  }
+}
