@@ -1,6 +1,8 @@
-[![Revibar — Easily display your best reviews](http://i.imgur.com/s8aLYtZ.png)]
+[![Revibar — Easily display your best reviews](http://i.imgur.com/s8aLYtZ.png)](https://github.com/ZERO72/revibar)
 
-[![Revibar Demo](http://i.imgur.com/cIaz1cO.gifv)]
+[![Revibar Demo](http://i.imgur.com/7ozL11e.png)](https://github.com/ZERO72/revibar)
+
+***
 
 Revibar is an open source, customizable aside plugin with default support for TripAdvisor.
 
