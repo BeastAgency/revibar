@@ -1,6 +1,6 @@
 [![Revibar — Easily display your best reviews](http://i.imgur.com/s8aLYtZ.png)](https://github.com/ZERO72/revibar)
 
-[![Revibar Demo](http://i.imgur.com/R0qP9KR.png)](https://github.com/ZERO72/revibar)
+[![Revibar Demo](http://i.imgur.com/dRVcsNB.png)](https://github.com/ZERO72/revibar)
 
 ***
 
