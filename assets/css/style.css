@@ -1,3 +1,5 @@
+/* Base Variables */
+/* Style Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -34,9 +36,16 @@ table {
 /* Styles */
 body {
   background-color: white;
-  font-family: Roboto;
+  font-family: "Source Sans Pro";
   font-size: 100%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background: #222;
+  font-weight: 400; }
+
+h3 {
+  font-weight: 600;
+  font-size: 1.125em;
+  margin: 4px 0; }
 
 .brb-main {
   display: block;
@@ -45,23 +54,76 @@ body {
   transition: transform 0.2s ease-out;
   top: 0;
   bottom: 0;
-  right: -400px;
-  width: 400px;
-  font-family: arial;
+  right: -300px;
+  width: 300px;
   text-align: left;
-  color: #303030;
-  font-weight: 400; }
+  color: #303030; }
   .brb-main .brb-aside {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 400px;
-    background: #f4f4f4;
+    width: 300px;
+    background: #fff;
     overflow: auto; }
     .brb-main .brb-aside article {
-      padding: 30px;
+      padding: 20px;
+      /* Module: Ranking */
       /* Module: Rating */
       /* Module: Reviews */ }
+      .brb-main .brb-aside article.brb-head {
+        background: #f4f4f4; }
+      .brb-main .brb-aside article.brb-module-traveler-rating {
+        display: block;
+        overflow: hidden; }
+        .brb-main .brb-aside article.brb-module-traveler-rating img {
+          height: 20px;
+          width: auto;
+          float: left;
+          margin: 2px 8px 0 0; }
+        .brb-main .brb-aside article.brb-module-traveler-rating .brb-review-count {
+          float: right; }
+        .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score {
+          float: left;
+          max-width: 120px;
+          padding-top: 3px;
+          height: 20px; }
+          .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul {
+            border: 2px solid green;
+            border-radius: 50%;
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            display: inline-block; }
+            .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul::before {
+              content: "";
+              position: absolute;
+              height: 10px;
+              width: 10px;
+              margin: 3px;
+              border-radius: 50%;
+              overflow: hidden; }
+      .brb-main .brb-aside article .brb-data-title {
+        float: left;
+        min-width: 140px;
+        display: block; }
+      .brb-main .brb-aside article.brb-module-ranking {
+        display: block;
+        overflow: hidden; }
+        .brb-main .brb-aside article.brb-module-ranking .brb-rank {
+          height: 40px;
+          width: 40px;
+          border-radius: 20px;
+          border: 1px solid #eee;
+          text-align: center;
+          line-height: 40px;
+          font-size: 125%;
+          font-weight: bold;
+          color: green;
+          float: left; }
+        .brb-main .brb-aside article.brb-module-ranking p {
+          float: left;
+          margin-left: 10px;
+          line-height: 1.25; }
       .brb-main .brb-aside article .brb-data-title {
         float: left;
         max-width: 120px; }
@@ -100,18 +162,23 @@ body {
       .brb-main .brb-aside article .brb-empty {
         display: none;
         content: "lol"; }
-      .brb-main .brb-aside article .brb-data-bar {
-        float: left;
-        background: green;
-        height: 10px;
-        margin-top: 8px; }
-        .brb-main .brb-aside article .brb-data-bar::before {
-          content: "";
+      .brb-main .brb-aside article.brb-module-reviews {
+        position: relative; }
+        .brb-main .brb-aside article.brb-module-reviews ul li {
+          overflow: hidden;
+          margin: 4px 0; }
+        .brb-main .brb-aside article.brb-module-reviews .brb-data-bar {
           position: absolute;
+          background: green;
+          height: 10px; }
+        .brb-main .brb-aside article.brb-module-reviews .brb-data-bar-bg {
+          content: "";
+          position: relative;
+          float: right;
           background: #ddd;
           width: 120px;
           height: 10px;
-          z-index: -1; }
+          margin-top: 8px; }
   .brb-main .brb-switch {
     position: absolute;
     top: 0px;
@@ -120,7 +187,7 @@ body {
     height: 50px;
     background: green; }
   .brb-main.brb-active {
-    transform: translateX(-400px); }
+    transform: translateX(-300px); }
   .brb-main header {
     padding: 15px 20px;
     background: #fff;
@@ -131,5 +198,21 @@ body {
     display: table; }
   .brb-main .brb-group:after {
     clear: both; }
+  .brb-main .brb-button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: green;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 4px;
+    letter-spacing: 1px; }
+  .brb-main .brb-copyright {
+    text-align: center;
+    margin: 20px 0;
+    color: #999; }
 
 /*# sourceMappingURL=style.css.map */

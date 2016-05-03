@@ -76,29 +76,24 @@ var Revibar = {
 		console.log(obj);
 
 		// Module: Rating
-		renderRating(obj.rating);
+		renderRating(obj.subratings[0].value, 'brb-module-rating-location');
+		renderRating(obj.subratings[1].value, 'brb-module-rating-sleep');
+		renderRating(obj.subratings[2].value, 'brb-module-rating-rooms');
+		renderRating(obj.subratings[3].value, 'brb-module-rating-service');
+		renderRating(obj.subratings[4].value, 'brb-module-rating-value');
+		renderRating(obj.subratings[5].value, 'brb-module-rating-cleanliness');
+
+		renderRating(obj.rating, 'brb-module-traveler-rating');
+		renderField(obj.num_reviews + ' reviews', 'brb-review-count');
 
 		// Module: Reviews
 		renderReviews(obj.review_rating_count, obj.num_reviews);
 
-		// // Create demo element
-		// var el = document.getElementById('brb-module-review');
-		// var node = document.createElement("P");
-		
-		// // Display name from data
-		// node.innerHTML = 'We have data for '+obj.name+'. Beastly!'; 
-		// el.appendChild(node);
-		
-		// // What the heck, display the number of reviews
-		// var node2 = document.createElement("P");
-		// node2.innerHTML = 'A whopping total of '+obj.num_reviews+' reviews is available. Please check the console log for more data.'; 
-		// el.appendChild(node2);
-
 		self.initSwitch();
 
-		function renderRating(rating) {
+		function renderRating(rating, id) {
 
-			var module = document.getElementById('brb-module-rating');
+			var module = document.getElementById(id);
 			var items = module.getElementsByClassName('brb-bullet');
 
 			for (var i = 0; i < items.length; i++) {
@@ -124,23 +119,28 @@ var Revibar = {
 
 			var nodeList = '';
 
-			var labelArray = ['Excellent','Very Good','Average','Poor','Terrible']; 
+			var labelArray = ['Terrible','Poor','Average','Very Good','Excellent']; 
 
-			Object.keys(review_rating_count).forEach(function(key) {
-			    console.log(key, review_rating_count[key]);
+			for (var i = 5 - 1; i >= 0; i--) {
 
-			    var width = (review_rating_count[key] / num_reviews) * 100;
+				var width = (review_rating_count[i] / num_reviews) * 100;
 
-			    var label = labelArray[key-1]; 
+			    var label = labelArray[i]; 
 
-				nodeList += '<li class="brb-group"><span class="brb-data-title">' + label + '</span><div class="brb-data-bar" style="width:'+ width+'%"></div></li>';
+				nodeList += '<li class=""><span class="brb-data-title">' + label + '</span><div class="brb-data-bar-bg"><div class="brb-data-bar" style="width:'+ width+'%"></div></div></li>';
 
-			});
+			}
 
 			var mainNode = module.getElementsByTagName("UL")[0];
 
 			mainNode.innerHTML = nodeList;
 
+		}
+
+		function renderField(data, id) {
+
+			var field = document.getElementById(id);
+			field.innerHTML = data;
 
 		}
 	
