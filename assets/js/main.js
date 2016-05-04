@@ -7,7 +7,7 @@ var Revibar = {
 		client	: '237567',
 		url		: 'http://api.tripadvisor.com/api/partner/2.0/location/'
 	},
-	
+
 	// Initiate the function
 	init: function(){
 
@@ -16,7 +16,7 @@ var Revibar = {
 			key: self.config.key
 		};
 		self.getData(obj);
-		
+
 	},
 
 	// Get the TripAdvisor data
@@ -47,7 +47,7 @@ var Revibar = {
 					console.log(data.responseJson.error.message);
 					break;
 				default:
-				
+
 					// Success, let's make use of this data
 					self.renderData(data);
 			}
@@ -66,12 +66,12 @@ var Revibar = {
 		request.send();
 
 	},
-	
+
 	// Render the TripAdvisor data
 	renderData: function(obj) {
 
 		var self = this;
-	
+
 		// Log all data
 		console.log(obj);
 
@@ -104,7 +104,7 @@ var Revibar = {
 					items[i].classList.add('brb-full');
 					items[i].classList.add('brb-half');
 				} else {
-					items[i].classList.add('empty');
+					items[i].classList.add('brb-empty');
 				}
 
 			}
@@ -119,13 +119,13 @@ var Revibar = {
 
 			var nodeList = '';
 
-			var labelArray = ['Terrible','Poor','Average','Very Good','Excellent']; 
+			var labelArray = ['Terrible','Poor','Average','Very Good','Excellent'];
 
 			for (var i = 5 - 1; i >= 0; i--) {
 
 				var width = (review_rating_count[i] / num_reviews) * 100;
 
-			    var label = labelArray[i]; 
+			    var label = labelArray[i];
 
 				nodeList += '<li class=""><span class="brb-data-title">' + label + '</span><div class="brb-data-bar-bg"><div class="brb-data-bar" style="width:'+ width+'%"></div></div></li>';
 
@@ -143,7 +143,7 @@ var Revibar = {
 			field.innerHTML = data;
 
 		}
-	
+
 	},
 
 	initSwitch: function() {
@@ -162,10 +162,8 @@ var Revibar = {
 		});
 
 	}
-	
+
 }
 
 // Initiate plugin
 Revibar.init();
-
-
