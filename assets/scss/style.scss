@@ -1,99 +1,87 @@
+@import 'reset';
 
 /* Base Variables */
 
-$brb-aside-width: 300px;
-
-/* Style Reset */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote {
-  &:before, &:after {
-    content: '';
-    content: none; } }
-
-q {
-  &:before, &:after {
-    content: '';
-    content: none; } }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+$brb-aside-width: 320px;
+$brb-aside-width-mini: 300px;
+$brb-brand-color: #589442;
+$brb-copy-color: #333;
+$brb-copy-font: "Source Sans Pro", Roboto, Helvetica, Arial, sans-serif;
 
 /* Styles */
 
 body {
-	background-color: white;
-	font-family: "Source Sans Pro";
+	font-family: $brb-copy-font;
 	font-size: 100%;
+  font-weight: 400;
 	line-height: 1.5;
-	background: #222;
-	font-weight: 400;
+  background: #222;
 }
 
 h3 {
-  font-weight: 600;
   font-size: 1.125em;
-  margin: 4px 0;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+hr.divider {
+  height: 0;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  border: 0;
+  border-bottom: 1px solid #eee;
 }
 
 .brb-main {
-	display: block;
-	position: fixed;
-	z-index: 99999;
-	transition: transform 0.2s ease-out;
+  position: fixed;
 	top: 0;
 	bottom: 0;
 	right: -$brb-aside-width;
-	width: $brb-aside-width;
+  z-index: 99999;
+  display: block;
+  width: $brb-aside-width;
 	text-align: left;
-    color: #303030;
+  color: $brb-copy-color;
+  transition: transform 0.5s cubic-bezier(.87,.41,.19,2);
+  -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 360px) {
+      right: -$brb-aside-width-mini;
+      width: $brb-aside-width-mini;
+    }
 
 	.brb-aside {
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		width: $brb-aside-width;
+    overflow: auto;
 		background: #fff;
-		overflow: auto;
+
+      @media (max-width: 360px) {
+        width: $brb-aside-width-mini;
+      }
+
+    .brb-head {
+      margin-top: 6px;
+    }
 
 		article {
+			padding: 10px 30px;
 
-			&.brb-head {
-				background: #f4f4f4;
-			}
-
-			padding: 20px;
+        @media (max-width: 360px) {
+          padding: 10px 20px;
+        }
 
 			&.brb-module-traveler-rating {
 				display: block;
 				overflow: hidden;
 				img {
-					height: 20px;
+          float: left;
 					width: auto;
-					float: left;
-					margin: 2px 8px 0 0;
+          height: 20px;
+          margin: 2px 6px 8px 0;
 				}
 
 				.brb-review-count {
@@ -103,35 +91,32 @@ h3 {
 				.brb-data-score {
 				  float: left;
 				  max-width: 120px;
-				  padding-top: 3px;
 				  height: 20px;
 				  ul {
-				    border: 2px solid green;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
+				    border: 2px solid $brb-brand-color;
 				    border-radius: 50%;
-				    box-sizing: border-box;
-				    width: 20px;
-				    height: 20px;
-				    display: inline-block;
 				    &::before {
 				      content: "";
 				      position: absolute;
-				      height: 10px;
 				      width: 10px;
+              height: 10px;
+              overflow: hidden;
 				      margin: 3px;
 				      border-radius: 50%;
-				      overflow: hidden;
 				    }
 				  }
 				}
-
-
 			}
 
 			.brb-data-title {
+        display: block;
 			  float: left;
 			  min-width: 140px;
-			  display: block;
-			}			
+			}
 
 			/* Module: Ranking */
 
@@ -140,16 +125,16 @@ h3 {
 			  overflow: hidden;
 
 			  .brb-rank {
-			    height: 40px;
+          float: left;
 			    width: 40px;
+          height: 40px;
+          border: 1px solid #eee;
 			    border-radius: 20px;
-			    border: 1px solid #eee;
-			    text-align: center;
-			    line-height: 40px;
 			    font-size: 125%;
 			    font-weight: bold;
-			    color: green;
-			    float: left;
+          line-height: 40px;
+          color: $brb-brand-color;
+			    text-align: center;
 			  }
 
 			  p {
@@ -158,7 +143,7 @@ h3 {
 			    line-height: 1.25;
 			  }
 
-			}			
+			}
 
 			/* Module: Rating */
 
@@ -169,39 +154,42 @@ h3 {
 
 			.brb-data-score {
 			  float: right;
+        margin-top: 2px;
 			  li {
-			    border: 2px solid green;
+          display: inline-block;
+          width: 20px;
+			    height: 20px;
+			    border: 2px solid $brb-brand-color;
 			    border-radius: 50%;
 			    box-sizing: border-box;
-			    width: 20px;
-			    height: 20px;
-			    display: inline-block;
 
 			    &::before {
 			      content: "";
 			      position: absolute;
-			      height: 10px;
 			      width: 10px;
+			      height: 10px;
+            overflow: hidden;
 			      margin: 3px;
 			      border-radius: 50%;
-			      overflow: hidden;
 			    }
 			  }
 			}
 
 			.brb-full {
 			  position: absolute;
-			  height: 10px;
+        z-index: 1;
 			  width: 10px;
+			  height: 10px;
+			  overflow: hidden;
 			  margin: 3px;
 			  border-radius: 50%;
-			  overflow: hidden;
+
 			  &::before {
 			    content :"";
 			    position: absolute;
-			    height: 10px;
 			    width: 10px;
-			    background: green;
+			    height: 10px;
+			    background: $brb-brand-color;
 			  }
 			}
 
@@ -210,93 +198,132 @@ h3 {
 			}
 
 			.brb-empty {
-			  display: none;
 			  content: "lol";
+			  display: none;
 			}
 
 
 			/* Module: Reviews */
 
 			&.brb-module-reviews {
-
 				position: relative;
 
 				ul li {
 					overflow: hidden;
-   					margin: 4px 0;
+ 					margin: 4px 0;
 				}
 
 				.brb-data-bar {
 					position: absolute;
-					background: green;
-					height: 10px;
+          height: 10px;
+					background: $brb-brand-color;
 				}
 
 				.brb-data-bar-bg {
 					content: "";
 					position: relative;
 					float: right;
-					background: #ddd;
-					width: 120px;
+          width: 120px;
 					height: 10px;
 					margin-top: 8px;
-				}				
-
+          background: #ddd;
+				}
 			}
-
-
 		}
 	}
 
 	.brb-switch {
 		position: absolute;
-		top: 0px;
-		left: -54px;
-		width: 50px;
-		height: 50px;
-		background: green;
+		top: 10px;
+		left: -70px;
+    z-index: 10;
+		width: 60px;
+		height: 60px;
+		background-color: $brb-brand-color;
+    background-image: url(../img/tripadvisor-logo.png);
+    background-size: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: transform 1s cubic-bezier(.8,-.5,.2,2), background .1s ease-out;
+
+    &:hover {
+      background-color: lighten($brb-brand-color,10%);
+    }
 	}
 
 	&.brb-active {
 		transform: translateX(-$brb-aside-width);
+    transition: transform .3s ease-out;
+
+      @media (max-width: 360px) {
+        transform: translateX(-$brb-aside-width-mini);
+      }
+
+    .brb-switch {
+      background: $brb-brand-color;
+      background-image: none;
+      transform: translateX(40px) translateY(62px) scale(.667) rotate(-360deg);
+      transition: transform .3s ease-out;
+
+        @media (max-width: 360px) {
+          transform: translateX(45px) translateY(56px) scale(.667) rotate(-360deg);
+        }
+
+      &::before {
+        content: "×";
+        position: absolute;
+        width: 100%;
+        font-size: 36px;
+        color: #fff;
+        line-height: 60px;
+        text-align: center;
+      }
+    }
 	}
 
 	header {
 		padding: 15px 20px;
+    font-weight: bold;
 		background: #fff;
-		font-weight: bold;
 	}
-
 
 	.brb-group:before,
 	.brb-group:after {
-	    content: " ";
-	    display: table;
+	  content: " ";
+	  display: table;
 	}
 	.brb-group:after {
-	    clear: both;
+	  clear: both;
 	}
+
+  .brb-group div {
+    overflow: hidden;
+  }
 
 	.brb-button {
 	  display: block;
-	  width: 100%;
 	  height: 40px;
-	  background: green;
-	  text-transform: uppercase;
-	  color: white;
-	  text-decoration: none;
-	  line-height: 38px;
-	  text-align: center;
-	  border-radius: 4px;
+    margin: 20px 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: $brb-copy-color;
+    text-align: center;
 	  letter-spacing: 1px;
+    text-transform: uppercase;
+	  text-decoration: none;
+    background-image: linear-gradient(#fff,#f6f6f6);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3)
 	}
 
 	.brb-copyright {
-	  text-align: center;
-	  margin: 20px 0;
+	  margin-top: 20px;
+    margin-bottom: 20px;
 	  color: #999;
+    text-align: center;
 	}
-
-
-
 }
