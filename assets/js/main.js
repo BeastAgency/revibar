@@ -73,7 +73,7 @@ var Revibar = {
 		var self = this;
 
 		// Log all data
-		console.log(obj);
+		//console.log(obj);
 
 		// Module: Rating
 		renderRating(obj.subratings[0].value, 'brb-module-rating-location');
@@ -115,19 +115,19 @@ var Revibar = {
 
 			var module = document.getElementById('brb-module-reviews');
 
-			console.log(review_rating_count);
-
 			var nodeList = '';
 
-			var labelArray = ['Terrible','Poor','Average','Very Good','Excellent'];
+			var labelArray = ['','Terrible','Poor','Average','Very Good','Excellent'];
 
-			for (var i = 5 - 1; i >= 0; i--) {
+			for (var i = 5; i >= 0; i--) {
 
 				var width = (review_rating_count[i] / num_reviews) * 100;
 
 			    var label = labelArray[i];
 
-				nodeList += '<li class=""><span class="brb-data-title">' + label + '</span><div class="brb-data-bar-bg"><div class="brb-data-bar" style="width:'+ width+'%"></div></div></li>';
+			    if (label != '') {
+					nodeList += '<li class=""><span class="brb-data-title">' + label + '</span><div class="brb-data-bar-bg"><div class="brb-data-bar" style="width:'+ width+'%"></div></div></li>';
+				}
 
 			}
 
