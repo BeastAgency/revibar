@@ -89,7 +89,22 @@ var Revibar = {
 		// Module: Reviews
 		renderReviews(obj.review_rating_count, obj.num_reviews);
 
+		// Module: Ranking
+		renderRanking(obj.ranking_data.ranking, obj.ranking_data.ranking_out_of, 'brb-module-ranking');
+
 		self.initSwitch();
+
+		function renderRanking(ranking, ranking_out_of, id) {
+
+			var module = document.getElementById(id);
+
+			module.getElementsByClassName('brb-rank')[0].innerHTML = ranking;
+
+			module.getElementsByClassName('brb-rank-small')[0].innerHTML = ranking;
+
+			module.getElementsByClassName('brb-rank-out-of')[0].innerHTML = ranking_out_of;
+
+		}
 
 		function renderRating(rating, id) {
 
