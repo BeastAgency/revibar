@@ -61,6 +61,7 @@ a {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   font-weight: 700;
+  margin-bottom: 45px;
   transition: all .1s; }
   .button--github:hover {
     background: #fff;
@@ -79,12 +80,14 @@ a {
     background-position: center center; }
 
 .demo-revibar {
-  display: block;
-  margin-top: 45px; }
+  display: none; }
   .demo-revibar img {
     width: 70%;
     max-width: 400px;
     vertical-align: bottom; }
+  @media (min-width: 640px) {
+    .demo-revibar {
+      display: block; } }
 
 .main {
   padding: 20px;
