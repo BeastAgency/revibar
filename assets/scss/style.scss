@@ -15,7 +15,7 @@ body {
 	font-size: 100%;
   font-weight: 400;
 	line-height: 1.5;
-  background: #222;
+  background: #eee;
 }
 
 h3 {
@@ -25,7 +25,21 @@ h3 {
   margin-bottom: 4px;
 }
 
-hr.divider {
+a {
+	text-decoration: none;
+	color: $brb-copy-color;
+}
+
+p {
+	margin: 20px 0;
+	font-size: 1.125em;
+}
+
+em {
+	font-style: italic;
+}
+
+.brb-divider {
   height: 0;
   margin-top: 10px;
   margin-bottom: 18px;
@@ -140,6 +154,8 @@ hr.divider {
 			  p {
 			    float: left;
 			    margin-left: 10px;
+					margin-top: 0;
+					margin-bottom: 0;
 			    line-height: 1.25;
 			  }
 
@@ -246,7 +262,7 @@ hr.divider {
     background-repeat: no-repeat;
     border-radius: 30px;
     box-sizing: border-box;
-    box-shadow: 0 1px 10px rgba(0,0,0,.5);
+    // box-shadow: 0 1px 10px rgba(0,0,0,.5);
     cursor: pointer;
     transition: transform 1s cubic-bezier(.8,-.5,.2,2), background .1s ease-out;
 
@@ -317,7 +333,7 @@ hr.divider {
 	  text-decoration: none;
     background-image: linear-gradient(#fff,#f6f6f6);
     border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.3)
+    box-shadow: 0 1px 4px rgba(0,0,0,.3)
 	}
 
 	.brb-copyright {

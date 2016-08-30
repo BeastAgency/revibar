@@ -1,2 +1,290 @@
-﻿html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after{content:'';content:none}q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{font-family:"Source Sans Pro",Roboto,Helvetica,Arial,sans-serif;font-size:100%;font-weight:400;line-height:1.5;background:#222}h3{font-size:1.125em;font-weight:600;margin-top:4px;margin-bottom:4px}hr.divider{height:0;margin-top:10px;margin-bottom:18px;border:0;border-bottom:1px solid #eee}.brb-main{position:fixed;top:0;bottom:0;right:-320px;z-index:99999;display:block;width:320px;text-align:left;color:#333;transition:transform 0.5s cubic-bezier(0.87, 0.41, 0.19, 2);-webkit-overflow-scrolling:touch}@media (max-width: 360px){.brb-main{right:-300px;width:300px}}.brb-main .brb-aside{position:absolute;top:0;bottom:0;width:320px;overflow:auto;background:#fff}@media (max-width: 360px){.brb-main .brb-aside{width:300px}}.brb-main .brb-aside .brb-head{margin-top:6px}.brb-main .brb-aside article{padding:10px 30px}@media (max-width: 360px){.brb-main .brb-aside article{padding:10px 20px}}.brb-main .brb-aside article.brb-module-traveler-rating{display:block;overflow:hidden}.brb-main .brb-aside article.brb-module-traveler-rating img{float:left;width:auto;height:20px;margin:2px 6px 8px 0}.brb-main .brb-aside article.brb-module-traveler-rating .brb-review-count{float:right}.brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score{float:left;max-width:120px;height:20px}.brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul{display:inline-block;width:20px;height:20px;box-sizing:border-box;border:2px solid #589442;border-radius:50%}.brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul::before{content:"";position:absolute;width:10px;height:10px;overflow:hidden;margin:3px;border-radius:50%}.brb-main .brb-aside article .brb-data-title{display:block;float:left;min-width:140px}.brb-main .brb-aside article.brb-module-ranking{display:block;overflow:hidden}.brb-main .brb-aside article.brb-module-ranking .brb-rank{float:left;width:40px;height:40px;border:1px solid #eee;border-radius:20px;font-size:125%;font-weight:bold;line-height:40px;color:#589442;text-align:center}.brb-main .brb-aside article.brb-module-ranking p{float:left;margin-left:10px;line-height:1.25}.brb-main .brb-aside article .brb-data-title{float:left;max-width:120px}.brb-main .brb-aside article .brb-data-score{float:right;margin-top:2px}.brb-main .brb-aside article .brb-data-score li{display:inline-block;width:20px;height:20px;border:2px solid #589442;border-radius:50%;box-sizing:border-box}.brb-main .brb-aside article .brb-data-score li::before{content:"";position:absolute;width:10px;height:10px;overflow:hidden;margin:3px;border-radius:50%}.brb-main .brb-aside article .brb-full{position:absolute;z-index:1;width:10px;height:10px;overflow:hidden;margin:3px;border-radius:50%}.brb-main .brb-aside article .brb-full::before{content:"";position:absolute;width:10px;height:10px;background:#589442}.brb-main .brb-aside article .brb-half::before{width:6px}.brb-main .brb-aside article .brb-empty{content:"lol";display:none}.brb-main .brb-aside article.brb-module-reviews{position:relative}.brb-main .brb-aside article.brb-module-reviews ul li{overflow:hidden;margin:4px 0}.brb-main .brb-aside article.brb-module-reviews .brb-data-bar{position:absolute;height:10px;background:#589442}.brb-main .brb-aside article.brb-module-reviews .brb-data-bar-bg{content:"";position:relative;float:right;width:120px;height:10px;margin-top:8px;background:#ddd}.brb-main .brb-switch{position:absolute;top:10px;left:-70px;z-index:10;width:60px;height:60px;background-color:#589442;background-image:url(../img/tripadvisor-logo.png);background-size:40px;background-position:center center;background-repeat:no-repeat;border-radius:30px;box-sizing:border-box;box-shadow:0 1px 10px rgba(0,0,0,0.5);cursor:pointer;transition:transform 1s cubic-bezier(0.8, -0.5, 0.2, 2),background 0.1s ease-out}.brb-main .brb-switch:hover{background-color:#6fb356}.brb-main.brb-active{transform:translateX(-320px);transition:transform .3s ease-out}@media (max-width: 360px){.brb-main.brb-active{transform:translateX(-300px)}}.brb-main.brb-active .brb-switch{background:#589442;background-image:none;transform:translateX(40px) translateY(62px) scale(0.667) rotate(-360deg);transition:transform .3s ease-out}@media (max-width: 360px){.brb-main.brb-active .brb-switch{transform:translateX(45px) translateY(56px) scale(0.667) rotate(-360deg)}}.brb-main.brb-active .brb-switch::before{content:"×";position:absolute;width:100%;font-size:36px;color:#fff;line-height:60px;text-align:center}.brb-main header{padding:15px 20px;font-weight:bold;background:#fff}.brb-main .brb-group:before,.brb-main .brb-group:after{content:" ";display:table}.brb-main .brb-group:after{clear:both}.brb-main .brb-group div{overflow:hidden}.brb-main .brb-button{display:block;height:40px;margin:20px 30px;font-weight:600;line-height:38px;color:#333;text-align:center;letter-spacing:1px;text-transform:uppercase;text-decoration:none;background-image:linear-gradient(#fff, #f6f6f6);border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,0.3)}.brb-main .brb-copyright{margin-top:20px;margin-bottom:20px;color:#999;text-align:center}
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Base Variables */
+/* Styles */
+body {
+  font-family: "Source Sans Pro", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #eee; }
+
+h3 {
+  font-size: 1.125em;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 4px; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+p {
+  margin: 20px 0;
+  font-size: 1.125em; }
+
+em {
+  font-style: italic; }
+
+.brb-divider {
+  height: 0;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  border: 0;
+  border-bottom: 1px solid #eee; }
+
+.brb-main {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -320px;
+  z-index: 99999;
+  display: block;
+  width: 320px;
+  text-align: left;
+  color: #333;
+  transition: transform 0.5s cubic-bezier(0.87, 0.41, 0.19, 2);
+  -webkit-overflow-scrolling: touch; }
+  @media (max-width: 360px) {
+    .brb-main {
+      right: -300px;
+      width: 300px; } }
+  .brb-main .brb-aside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    overflow: auto;
+    background: #fff; }
+    @media (max-width: 360px) {
+      .brb-main .brb-aside {
+        width: 300px; } }
+    .brb-main .brb-aside .brb-head {
+      margin-top: 6px; }
+    .brb-main .brb-aside article {
+      padding: 10px 30px;
+      /* Module: Ranking */
+      /* Module: Rating */
+      /* Module: Reviews */ }
+      @media (max-width: 360px) {
+        .brb-main .brb-aside article {
+          padding: 10px 20px; } }
+      .brb-main .brb-aside article.brb-module-traveler-rating {
+        display: block;
+        overflow: hidden; }
+        .brb-main .brb-aside article.brb-module-traveler-rating img {
+          float: left;
+          width: auto;
+          height: 20px;
+          margin: 2px 6px 8px 0; }
+        .brb-main .brb-aside article.brb-module-traveler-rating .brb-review-count {
+          float: right; }
+        .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score {
+          float: left;
+          max-width: 120px;
+          height: 20px; }
+          .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
+            border: 2px solid #589442;
+            border-radius: 50%; }
+            .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              overflow: hidden;
+              margin: 3px;
+              border-radius: 50%; }
+      .brb-main .brb-aside article .brb-data-title {
+        display: block;
+        float: left;
+        min-width: 140px; }
+      .brb-main .brb-aside article.brb-module-ranking {
+        display: block;
+        overflow: hidden; }
+        .brb-main .brb-aside article.brb-module-ranking .brb-rank {
+          float: left;
+          width: 40px;
+          height: 40px;
+          border: 1px solid #eee;
+          border-radius: 20px;
+          font-size: 125%;
+          font-weight: bold;
+          line-height: 40px;
+          color: #589442;
+          text-align: center; }
+        .brb-main .brb-aside article.brb-module-ranking p {
+          float: left;
+          margin-left: 10px;
+          margin-top: 0;
+          margin-bottom: 0;
+          line-height: 1.25; }
+      .brb-main .brb-aside article .brb-data-title {
+        float: left;
+        max-width: 120px; }
+      .brb-main .brb-aside article .brb-data-score {
+        float: right;
+        margin-top: 2px; }
+        .brb-main .brb-aside article .brb-data-score li {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #589442;
+          border-radius: 50%;
+          box-sizing: border-box; }
+          .brb-main .brb-aside article .brb-data-score li::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            overflow: hidden;
+            margin: 3px;
+            border-radius: 50%; }
+      .brb-main .brb-aside article .brb-full {
+        position: absolute;
+        z-index: 1;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 50%; }
+        .brb-main .brb-aside article .brb-full::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: #589442; }
+      .brb-main .brb-aside article .brb-half::before {
+        width: 6px; }
+      .brb-main .brb-aside article .brb-empty {
+        content: "lol";
+        display: none; }
+      .brb-main .brb-aside article.brb-module-reviews {
+        position: relative; }
+        .brb-main .brb-aside article.brb-module-reviews ul li {
+          overflow: hidden;
+          margin: 4px 0; }
+        .brb-main .brb-aside article.brb-module-reviews .brb-data-bar {
+          position: absolute;
+          height: 10px;
+          background: #589442; }
+        .brb-main .brb-aside article.brb-module-reviews .brb-data-bar-bg {
+          content: "";
+          position: relative;
+          float: right;
+          width: 120px;
+          height: 10px;
+          margin-top: 8px;
+          background: #ddd; }
+  .brb-main .brb-switch {
+    position: absolute;
+    top: 10px;
+    left: -70px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-color: #589442;
+    background-image: url(../img/tripadvisor-logo.png);
+    background-size: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 1s cubic-bezier(0.8, -0.5, 0.2, 2), background 0.1s ease-out; }
+    .brb-main .brb-switch:hover {
+      background-color: #6fb356; }
+  .brb-main.brb-active {
+    transform: translateX(-320px);
+    transition: transform .3s ease-out; }
+    @media (max-width: 360px) {
+      .brb-main.brb-active {
+        transform: translateX(-300px); } }
+    .brb-main.brb-active .brb-switch {
+      background: #589442;
+      background-image: none;
+      transform: translateX(40px) translateY(62px) scale(0.667) rotate(-360deg);
+      transition: transform .3s ease-out; }
+      @media (max-width: 360px) {
+        .brb-main.brb-active .brb-switch {
+          transform: translateX(45px) translateY(56px) scale(0.667) rotate(-360deg); } }
+      .brb-main.brb-active .brb-switch::before {
+        content: "×";
+        position: absolute;
+        width: 100%;
+        font-size: 36px;
+        color: #fff;
+        line-height: 60px;
+        text-align: center; }
+  .brb-main header {
+    padding: 15px 20px;
+    font-weight: bold;
+    background: #fff; }
+  .brb-main .brb-group:before,
+  .brb-main .brb-group:after {
+    content: " ";
+    display: table; }
+  .brb-main .brb-group:after {
+    clear: both; }
+  .brb-main .brb-group div {
+    overflow: hidden; }
+  .brb-main .brb-button {
+    display: block;
+    height: 40px;
+    margin: 20px 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #333;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-image: linear-gradient(#fff, #f6f6f6);
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+  .brb-main .brb-copyright {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #999;
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
