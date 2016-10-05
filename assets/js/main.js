@@ -113,9 +113,9 @@ var Revibar = {
 
 			for (var i = 0; i < items.length; i++) {
 
-				if (i < (rating-1)) {
+				if (i <= (rating-1)) {
 					items[i].classList.add('brb-full');
-				} else if (i > (rating-1) && i < (i+1)) {
+				} else if (i > (rating-1) && i < rating) {
 					items[i].classList.add('brb-full');
 					items[i].classList.add('brb-half');
 				} else {
