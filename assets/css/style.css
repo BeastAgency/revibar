@@ -124,7 +124,7 @@ em {
             width: 20px;
             height: 20px;
             box-sizing: border-box;
-            border: 2px solid #589442;
+            border: 2px solid #00af87;
             border-radius: 50%; }
             .brb-main .brb-aside article.brb-module-traveler-rating .brb-data-score ul::before {
               content: "";
@@ -150,7 +150,7 @@ em {
           font-size: 125%;
           font-weight: bold;
           line-height: 40px;
-          color: #589442;
+          color: #00af87;
           text-align: center; }
         .brb-main .brb-aside article.brb-module-ranking p {
           float: left;
@@ -168,7 +168,7 @@ em {
           display: inline-block;
           width: 20px;
           height: 20px;
-          border: 2px solid #589442;
+          border: 2px solid #00af87;
           border-radius: 50%;
           box-sizing: border-box; }
           .brb-main .brb-aside article .brb-data-score li::before {
@@ -192,7 +192,7 @@ em {
           position: absolute;
           width: 10px;
           height: 10px;
-          background: #589442; }
+          background: #00af87; }
       .brb-main .brb-aside article .brb-half::before {
         width: 6px; }
       .brb-main .brb-aside article .brb-empty {
@@ -206,7 +206,7 @@ em {
         .brb-main .brb-aside article.brb-module-reviews .brb-data-bar {
           position: absolute;
           height: 10px;
-          background: #589442; }
+          background: #00af87; }
         .brb-main .brb-aside article.brb-module-reviews .brb-data-bar-bg {
           content: "";
           position: relative;
@@ -222,7 +222,7 @@ em {
     z-index: 10;
     width: 60px;
     height: 60px;
-    background-color: #589442;
+    background-color: #00af87;
     background-image: url(../img/tripadvisor-logo.png);
     background-size: 40px;
     background-position: center center;
@@ -232,7 +232,7 @@ em {
     cursor: pointer;
     transition: transform 1s cubic-bezier(0.8, -0.5, 0.2, 2), background 0.1s ease-out; }
     .brb-main .brb-switch:hover {
-      background-color: #6fb356; }
+      background-color: #00e2ae; }
   .brb-main.brb-active {
     transform: translateX(-320px);
     transition: transform .3s ease-out; }
@@ -240,7 +240,7 @@ em {
       .brb-main.brb-active {
         transform: translateX(-300px); } }
     .brb-main.brb-active .brb-switch {
-      background: #589442;
+      background: #00af87;
       background-image: none;
       transform: translateX(40px) translateY(62px) scale(0.667) rotate(-360deg);
       transition: transform .3s ease-out; }
